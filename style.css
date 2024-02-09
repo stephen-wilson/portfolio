@@ -1,0 +1,39 @@
+img {
+    width: 100px;
+    height: auto;
+}
+
+body {
+    /* Set line height to 1.5 times the font size
+       and use the OS’s UI font as the website font
+     */
+    font: 100%/1.5 system-ui;
+}
+
+label, input, textarea {
+	/* Make these elements behave like block elements,
+	   i.e. occupy the whole available width and create line breaks before and after
+	 */
+	display: block;
+}
+
+label {
+	/* Add some space before each label that grows as the font size grows */
+	margin-top: 1em;
+}
+
+input, textarea {
+	/* Because form fields are special,
+	   they also need `width: 100%`
+	   to actually fill the whole available width.
+	 */
+	width: 100%;
+
+	/* Special sizing mode that makes the element’s width
+	   include internal spacing (padding) and borders
+	 */
+	box-sizing: border-box;
+
+	/* Use the same font and font metrics as the rest of the page */
+	font: inherit;
+}
