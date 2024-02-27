@@ -1,6 +1,12 @@
 :root {
 	--color-accent: oklch(65% 50% 0);
 	accent-color: var(--color-accent);
+	color-scheme: dark;
+}
+
+nav {
+	--border-color: oklch(50% 10% 200 / 40%);
+	/* ... other styles and nested rules ... */
 }
 
 #profile-photo {
@@ -35,7 +41,8 @@ ul {
 	margin-bottom: 1em;
 	border-bottom-width: 1px;
 	border-bottom-style: solid;
-	border-bottom-color: oklch(80% 3% 200);
+	/* border-bottom-color: oklch(80% 3% 200); */
+	border-bottom-color: var(--border-color);
 	a {
 		flex: 1;
 		text-decoration: none;
@@ -50,7 +57,8 @@ a:not(.current) {
 		border-bottom-width: 0.4em;
 		border-bottom-style: solid;
 		border-bottom-color: var(--color-accent);
-		background-color: oklch(from var(--color-accent) 95% 5% h);
+		/* background-color: oklch(from var(--color-accent) 95% 5% h); */
+		background-color: color-mix(in oklch, var(--color-accent), canvas 85%);
 		padding-bottom: 0.3em;
 	}
 }
@@ -84,6 +92,12 @@ a:not(.current) {
 	}
 }
 
+.color-scheme {
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+}
+
 h1 {
 	font-size: 400%;
 }
@@ -110,4 +124,8 @@ button {
 	grid-column: 1 / -1;
 }
 
+select {
+	font-size: 80%;
+	font-family: inherit;
+}
 
